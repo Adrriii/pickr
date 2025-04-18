@@ -198,26 +198,58 @@ h1 {
 }
 
 .remove-button {
-  background: none;
+  background: rgba(255, 0, 0, 0.1);
   border: none;
-  color: inherit;
+  color: #e74c3c;
   cursor: pointer;
   font-size: 1.2rem;
+  line-height: 1;
   padding: 0;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   transition: all 0.2s ease;
   margin-left: 4px;
-  opacity: 0.7;
+  opacity: 0.8;
+}
+
+.remove-button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: -2px; /* Fine-tune vertical alignment */
 }
 
 .remove-button:hover {
   opacity: 1;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(231, 76, 60, 0.2);
+  transform: scale(1.1);
+}
+
+.remove-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.4);
+}
+
+/* Adjust remove button color for highlighted and winner states */
+.choice-item.highlighted .remove-button {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.choice-item.winner .remove-button {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.choice-item.highlighted .remove-button:hover,
+.choice-item.winner .remove-button:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .decide-button {
@@ -431,5 +463,14 @@ h1 {
 
   .footer-divider {
     color: rgba(255, 255, 255, 0.2);
+  }
+
+  .remove-button {
+    background: rgba(231, 76, 60, 0.15);
+    color: #e74c3c;
+  }
+  
+  .remove-button:hover {
+    background-color: rgba(231, 76, 60, 0.25);
   }
 }

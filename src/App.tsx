@@ -213,8 +213,9 @@ function App() {
                 onClick={() => removeChoice(index)} 
                 className="remove-button"
                 aria-label={t('removeLabel')}
+                title={t('removeLabel')}
               >
-                ×
+                <span aria-hidden="true">×</span>
               </button>
             </motion.div>
           ))}

@@ -7,9 +7,9 @@ const resources = {
     translation: {
       title: 'Pickr',
       subtitle: "Let's help you choose!",
-      inputPlaceholder: 'Enter a choice...',
+      inputPlaceholder: 'Add a choice...',
       addButton: 'Add',
-      pickButton: 'Pick!',
+      pickButton: 'Random Pick!',
       removeLabel: 'Remove choice',
       footer: {
         github: 'GitHub',
@@ -20,11 +20,11 @@ const resources = {
   fr: {
     translation: {
       title: 'Pickr',
-      subtitle: 'Aidons-vous à choisir !',
-      inputPlaceholder: 'Entrez un choix...',
+      subtitle: 'Faites votre choix !',
+      inputPlaceholder: 'Ajoutez une option...',
       addButton: 'Ajouter',
-      pickButton: 'Choisir !',
-      removeLabel: 'Supprimer le choix',
+      pickButton: 'Tirer au sort',
+      removeLabel: 'Retirer cette option',
       footer: {
         github: 'GitHub',
         copyright: '{{year}} Pickr'
@@ -35,9 +35,9 @@ const resources = {
     translation: {
       title: 'Pickr',
       subtitle: '¡Te ayudamos a elegir!',
-      inputPlaceholder: 'Ingresa una opción...',
+      inputPlaceholder: 'Añade una opción...',
       addButton: 'Agregar',
-      pickButton: '¡Elegir!',
+      pickButton: '¡Al azar!',
       removeLabel: 'Eliminar opción',
       footer: {
         github: 'GitHub',
@@ -49,9 +49,9 @@ const resources = {
     translation: {
       title: 'Pickr',
       subtitle: 'Lass uns dir bei der Auswahl helfen!',
-      inputPlaceholder: 'Gib eine Option ein...',
+      inputPlaceholder: 'Füge eine Option hinzu...',
       addButton: 'Hinzufügen',
-      pickButton: 'Wählen!',
+      pickButton: 'Zufällig wählen!',
       removeLabel: 'Option entfernen',
       footer: {
         github: 'GitHub',
@@ -63,9 +63,9 @@ const resources = {
     translation: {
       title: 'Pickr',
       subtitle: 'Aiutiamoti a scegliere!',
-      inputPlaceholder: 'Inserisci una scelta...',
+      inputPlaceholder: 'Aggiungi una scelta...',
       addButton: 'Aggiungi',
-      pickButton: 'Scegli!',
+      pickButton: 'Scelta casuale!',
       removeLabel: 'Rimuovi scelta',
       footer: {
         github: 'GitHub',
@@ -77,9 +77,9 @@ const resources = {
     translation: {
       title: 'Pickr',
       subtitle: '選択をお手伝いします！',
-      inputPlaceholder: '選択肢を入力...',
+      inputPlaceholder: '選択肢を追加...',
       addButton: '追加',
-      pickButton: '選ぶ！',
+      pickButton: 'ランダムに選ぶ！',
       removeLabel: '選択肢を削除',
       footer: {
         github: 'GitHub',
@@ -91,9 +91,9 @@ const resources = {
     translation: {
       title: 'Pickr',
       subtitle: '선택을 도와드립니다!',
-      inputPlaceholder: '옵션을 입력하세요...',
+      inputPlaceholder: '옵션을 추가하세요...',
       addButton: '추가',
-      pickButton: '선택!',
+      pickButton: '랜덤 선택!',
       removeLabel: '옵션 삭제',
       footer: {
         github: 'GitHub',
@@ -105,9 +105,9 @@ const resources = {
     translation: {
       title: 'Pickr',
       subtitle: '让我们帮您选择！',
-      inputPlaceholder: '输入选项...',
+      inputPlaceholder: '添加选项...',
       addButton: '添加',
-      pickButton: '选择！',
+      pickButton: '随机选择！',
       removeLabel: '删除选项',
       footer: {
         github: 'GitHub',
