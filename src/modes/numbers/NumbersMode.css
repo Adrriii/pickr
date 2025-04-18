@@ -58,6 +58,22 @@
   background-clip: text;
 }
 
+.result-display.success {
+  animation: successPop 0.5s ease-out;
+}
+
+@keyframes successPop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .pick-button {
   padding: 1rem 2rem;
   font-size: 1.1rem;
