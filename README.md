@@ -11,7 +11,7 @@
 
 A random choice picker web app.
 
-[Tri it live !](https://pickr.adri-web.dev)
+[Try it live !](https://pickr.adri-web.dev)
 
 ## AI Disclosure and Transparency
 
