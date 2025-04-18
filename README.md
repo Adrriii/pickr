@@ -11,6 +11,8 @@
 
 A random choice picker web app.
 
+[Tri it live !](https://pickr.adri-web.dev)
+
 ## AI Disclosure and Transparency
 
 In the interest of transparency and ethical AI usage, is it to note that this project was developed with assistance from AI tools, including Claude 3.5 Sonnet in VSCode's Github Copilot Agent mode.
