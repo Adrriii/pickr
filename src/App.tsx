@@ -32,7 +32,8 @@ function App() {
       transition: {
         type: "spring",
         stiffness: 500,
-        damping: 30
+        damping: 30,
+        restDelta: 0.001 // Ensures animation completes properly
       }
     },
     visible: { 
@@ -42,7 +43,8 @@ function App() {
       transition: {
         type: "spring",
         stiffness: 500,
-        damping: 25
+        damping: 25,
+        restDelta: 0.001
       }
     },
     exit: { 
@@ -50,31 +52,35 @@ function App() {
       scale: 0.6,
       transition: {
         duration: 0.2,
-        ease: [0.43, 0.13, 0.23, 0.96] // Custom easing for smooth exit
+        ease: "easeOut"
       }
     },
     highlighted: {
-      scale: 1.05,
+      scale: 1.02,
       backgroundColor: "#3498db",
       color: "white",
       borderColor: "#2980b9",
       boxShadow: "0 0 15px rgba(52, 152, 219, 0.5)",
       transition: {
         type: "spring",
-        stiffness: 400,
-        damping: 10
+        stiffness: 600,
+        damping: 25,
+        restDelta: 0.001,
+        restSpeed: 0.001
       }
     },
     winner: {
-      scale: 1.1,
+      scale: 1.05,
       backgroundColor: "#2ecc71",
       color: "white",
       borderColor: "#27ae60",
       boxShadow: "0 0 20px rgba(46, 204, 113, 0.6)",
       transition: {
         type: "spring",
-        stiffness: 400,
-        damping: 8,
+        stiffness: 600,
+        damping: 20,
+        restDelta: 0.001,
+        restSpeed: 0.001,
         duration: 0.5
       }
     }
@@ -192,7 +198,7 @@ function App() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        layout
+        layout="position"
       >
         <AnimatePresence mode="popLayout">
           {choices.map((choice, index) => (
@@ -206,7 +212,8 @@ function App() {
                 winnerIndex === index ? "winner" : "visible"
               }
               exit="exit"
-              layout
+              layout="position"
+              initial={false}
             >
               {choice.text}
               <button 
