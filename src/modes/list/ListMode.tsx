@@ -8,7 +8,7 @@ interface ListItem {
   text: string;
 }
 
-export const ListMode = () => {
+const ListMode = () => {
   const { t } = useTranslation()
   const [items, setItems] = useState<ListItem[]>([])
   const [currentInput, setCurrentInput] = useState('')
@@ -125,6 +125,8 @@ export const ListMode = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
+        role="form"
+        aria-label={t('modes.list')}
       >
         <input
           type="text"
@@ -133,8 +135,15 @@ export const ListMode = () => {
           onKeyPress={handleKeyPress}
           placeholder={t('inputPlaceholder')}
           className="choice-input"
+          aria-label={t('inputPlaceholder')}
         />
-        <button onClick={addItem} className="add-button">{t('addButton')}</button>
+        <button 
+          onClick={addItem} 
+          className="add-button"
+          aria-label={t('addButton')}
+        >
+          {t('addButton')}
+        </button>
       </motion.div>
 
       <motion.div 
@@ -143,6 +152,8 @@ export const ListMode = () => {
         initial="hidden"
         animate="visible"
         layout="position"
+        role="list"
+        aria-label={t('modes.list')}
       >
         <AnimatePresence mode="popLayout">
           {items.map((item, index) => (
@@ -158,13 +169,14 @@ export const ListMode = () => {
               exit="exit"
               layout="position"
               initial={false}
+              role="listitem"
+              aria-selected={winnerIndex === index}
             >
-              {item.text}
+              <span>{item.text}</span>
               <button 
                 onClick={() => removeItem(index)} 
                 className="remove-button"
-                aria-label={t('removeLabel')}
-                title={t('removeLabel')}
+                aria-label={`${t('removeLabel')} ${item.text}`}
               >
                 <span aria-hidden="true">×</span>
               </button>
@@ -184,6 +196,8 @@ export const ListMode = () => {
             exit={{ opacity: 0, y: 20 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            aria-label={t('pickButton')}
+            aria-disabled={isAnimating}
           >
             {t('pickButton')}
           </motion.button>
@@ -192,3 +206,5 @@ export const ListMode = () => {
     </>
   )
 }
+
+export default ListMode;

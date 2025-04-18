@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import './NumbersMode.css'
 
-export const NumbersMode = () => {
+const NumbersMode = () => {
   const { t } = useTranslation()
   const [min, setMin] = useState<string>('0')
   const [max, setMax] = useState<string>('100')
@@ -53,29 +53,42 @@ export const NumbersMode = () => {
   }
 
   return (
-    <div className="numbers-container">
+    <div className="numbers-container" role="form" aria-label={t('modes.numbers')}>
       <div className="range-inputs">
         <div className="input-group">
-          <label className="input-label">{t('numbers.min')}</label>
+          <label htmlFor="min-input" className="input-label">{t('numbers.min')}</label>
           <input
+            id="min-input"
             type="text"
             className="number-input"
             value={min}
             onChange={handleMinChange}
+            aria-label={t('numbers.min')}
+            pattern="-?[0-9]*"
+            inputMode="numeric"
           />
         </div>
         <div className="input-group">
-          <label className="input-label">{t('numbers.max')}</label>
+          <label htmlFor="max-input" className="input-label">{t('numbers.max')}</label>
           <input
+            id="max-input"
             type="text"
             className="number-input"
             value={max}
             onChange={handleMaxChange}
+            aria-label={t('numbers.max')}
+            pattern="-?[0-9]*"
+            inputMode="numeric"
           />
         </div>
       </div>
 
-      <div className={`result-display ${showSuccess ? 'success' : ''}`}>
+      <div 
+        className={`result-display ${showSuccess ? 'success' : ''}`}
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+      >
         {result !== null ? result : '?'}
       </div>
 
@@ -83,9 +96,13 @@ export const NumbersMode = () => {
         className="pick-button"
         onClick={pickRandom}
         disabled={isAnimating || isNaN(parseInt(min)) || isNaN(parseInt(max)) || parseInt(min) >= parseInt(max)}
+        aria-label={t('pickButton')}
+        aria-disabled={isAnimating || isNaN(parseInt(min)) || isNaN(parseInt(max)) || parseInt(min) >= parseInt(max)}
       >
         {t('pickButton')}
       </button>
     </div>
   )
 }
+
+export default NumbersMode;
