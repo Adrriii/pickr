@@ -5,7 +5,7 @@ import { DiceIcon } from './DiceIcon'
 import './App.css'
 
 function App() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const [choices, setChoices] = useState<Array<{ id: string; text: string }>>([])
   const [currentInput, setCurrentInput] = useState('')
   const [isAnimating, setIsAnimating] = useState(false)
@@ -250,7 +250,7 @@ function App() {
         transition={{ duration: 0.5, delay: 0.3 }}
       >
         <div className="footer-content">
-          <a href="https://github.com/Adrriii/pickr" target="_blank" rel="noopener noreferrer">{t('footer.github')}</a>
+          <a href="https://github.com/Adrriii/pickr" target="_blank" rel="noopener noreferrer">{t('footer.github')} - Adrien Boitelle</a>
         </div>
         <div>{t('footer.copyright', { year: new Date().getFullYear() })}</div>
       </motion.footer>

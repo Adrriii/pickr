@@ -44,6 +44,76 @@ const resources = {
         copyright: '{{year}} Pickr'
       }
     }
+  },
+  de: {
+    translation: {
+      title: 'Pickr',
+      subtitle: 'Lass uns dir bei der Auswahl helfen!',
+      inputPlaceholder: 'Gib eine Option ein...',
+      addButton: 'Hinzufügen',
+      pickButton: 'Wählen!',
+      removeLabel: 'Option entfernen',
+      footer: {
+        github: 'GitHub',
+        copyright: '{{year}} Pickr'
+      }
+    }
+  },
+  it: {
+    translation: {
+      title: 'Pickr',
+      subtitle: 'Aiutiamoti a scegliere!',
+      inputPlaceholder: 'Inserisci una scelta...',
+      addButton: 'Aggiungi',
+      pickButton: 'Scegli!',
+      removeLabel: 'Rimuovi scelta',
+      footer: {
+        github: 'GitHub',
+        copyright: '{{year}} Pickr'
+      }
+    }
+  },
+  ja: {
+    translation: {
+      title: 'Pickr',
+      subtitle: '選択をお手伝いします！',
+      inputPlaceholder: '選択肢を入力...',
+      addButton: '追加',
+      pickButton: '選ぶ！',
+      removeLabel: '選択肢を削除',
+      footer: {
+        github: 'GitHub',
+        copyright: '{{year}} Pickr'
+      }
+    }
+  },
+  ko: {
+    translation: {
+      title: 'Pickr',
+      subtitle: '선택을 도와드립니다!',
+      inputPlaceholder: '옵션을 입력하세요...',
+      addButton: '추가',
+      pickButton: '선택!',
+      removeLabel: '옵션 삭제',
+      footer: {
+        github: 'GitHub',
+        copyright: '{{year}} Pickr'
+      }
+    }
+  },
+  zh: {
+    translation: {
+      title: 'Pickr',
+      subtitle: '让我们帮您选择！',
+      inputPlaceholder: '输入选项...',
+      addButton: '添加',
+      pickButton: '选择！',
+      removeLabel: '删除选项',
+      footer: {
+        github: 'GitHub',
+        copyright: '{{year}} Pickr'
+      }
+    }
   }
 }
 
